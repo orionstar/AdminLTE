@@ -6,7 +6,7 @@
   background-color: #605ca8;
 }
 .skin-purple .main-header .navbar .nav > li > a {
-  color: #ffffff;
+  color: #fff;
 }
 .skin-purple .main-header .navbar .nav > li > a:hover,
 .skin-purple .main-header .navbar .nav > li > a:active,
@@ -19,7 +19,7 @@
   color: #f6f6f6;
 }
 .skin-purple .main-header .navbar .sidebar-toggle {
-  color: #ffffff;
+  color: #fff;
 }
 .skin-purple .main-header .navbar .sidebar-toggle:hover {
   color: #f6f6f6;
@@ -31,8 +31,8 @@
 .skin-purple .main-header .navbar .sidebar-toggle:hover {
   background-color: #555299;
 }
-@media (max-width: 767px) {
-  .skin-purple .main-header .navbar .dropdown-menu li.divider {
+@media (max-width: 0) {
+  .skin-purple .main-header .navbar .dropdown-menu li.dropdown-divider {
     background-color: rgba(255, 255, 255, 0.1);
   }
   .skin-purple .main-header .navbar .dropdown-menu li a {
@@ -44,7 +44,7 @@
 }
 .skin-purple .main-header .logo {
   background-color: #555299;
-  color: #ffffff;
+  color: #fff;
   border-bottom: 0 solid transparent;
 }
 .skin-purple .main-header .logo:hover {
@@ -75,7 +75,7 @@
 .skin-purple .sidebar-menu > li:hover > a,
 .skin-purple .sidebar-menu > li.active > a,
 .skin-purple .sidebar-menu > li.menu-open > a {
-  color: #ffffff;
+  color: #fff;
   background: #1e282c;
 }
 .skin-purple .sidebar-menu > li.active > a {
@@ -96,18 +96,21 @@
 }
 .skin-purple .sidebar-menu .treeview-menu > li.active > a,
 .skin-purple .sidebar-menu .treeview-menu > li > a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 .skin-purple .sidebar-form {
   border-radius: 3px;
   border: 1px solid #374850;
   margin: 10px 10px;
 }
+.skin-purple .sidebar-form .input-group-append {
+  background: transparent;
+}
 .skin-purple .sidebar-form input[type="text"],
 .skin-purple .sidebar-form .btn {
   box-shadow: none;
   background-color: #374850;
-  border: 1px solid transparent;
+  border: 0;
   height: 35px;
 }
 .skin-purple .sidebar-form input[type="text"] {
@@ -118,11 +121,11 @@
   border-bottom-left-radius: 2px;
 }
 .skin-purple .sidebar-form input[type="text"]:focus,
-.skin-purple .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+.skin-purple .sidebar-form input[type="text"]:focus + .input-group-append .btn {
   background-color: #fff;
   color: #666;
 }
-.skin-purple .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+.skin-purple .sidebar-form input[type="text"]:focus + .input-group-append .btn {
   border-left-color: #fff;
 }
 .skin-purple .sidebar-form .btn {
@@ -131,4 +134,5 @@
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 0;
+  border: 1px solid transparent;
 }

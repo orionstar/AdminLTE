@@ -173,8 +173,8 @@ $(function () {
     })
 
     // Create the tab button
-    var $tabButton = $('<li />', {'class': 'active'})
-        .html('<a href=\'#control-sidebar-theme-demo-options-tab\' data-toggle=\'tab\'>'
+    var $tabButton = $('<li />', {'class': 'nav-item active'})
+        .html('<a href=\'#control-sidebar-theme-demo-options-tab\' class=\'nav-link\' data-toggle=\'tab\'>'
             + '<i class="fa fa-wrench"></i>'
             + '</a>')
 

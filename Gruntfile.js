@@ -278,7 +278,10 @@ module.exports = function (grunt) { // jshint ignore:line
           cwd: './',
           expand: true,
           flatten: true,
-          src: ['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'],
+          src: [
+            'node_modules/bootstrap/dist/js/bootstrap.min.js', 
+            'node_modules/jquery/dist/jquery.min.js'
+          ],
           dest: 'dist/js/',
           filter: 'isFile'
       }

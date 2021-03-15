@@ -39,13 +39,6 @@
   padding-bottom: 10px;
 }
 
-// Remove border from form
-.sidebar-form {
-  input:focus {
-    border-color: transparent;
-  }
-}
-
 // Sidebar user panel
 .user-panel {
   position: relative;
@@ -104,16 +97,13 @@
     .badge {
       margin-right: 5px;
     }
-    .badge {
-      margin-top: 3px;
-    }
   }
   li.header {
     padding: 10px 25px 10px 15px;
     font-size: 12px;
   }
   li > a > .fa-angle-left,
-  li > a > .pull-right-container > .fa-angle-left {
+  li > a > .float-right-container > .fa-angle-left {
     width: auto;
     height: auto;
     padding: 0;
@@ -129,7 +119,7 @@
 
   .menu-open {
     > a > .fa-angle-left,
-    > a > .pull-right-container > .fa-angle-left {
+    > a > .float-right-container > .fa-angle-left {
       transform: rotate(-90deg);
     }
   }

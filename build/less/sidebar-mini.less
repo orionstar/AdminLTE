@@ -56,8 +56,8 @@
       .sidebar-form,
       .sidebar-menu > li > a > span,
       .sidebar-menu > li > .treeview-menu,
-      .sidebar-menu > li > a > .pull-right,
-      .sidebar-menu > li > a > span > .pull-right,
+      .sidebar-menu > li > a > .float-right,
+      .sidebar-menu > li > a > span > .float-right,
       .sidebar-menu li.header {
         display: none !important;
         -webkit-transform: translateZ(0);
@@ -94,7 +94,7 @@
       > a {
         //overflow: visible;
       }
-      > a > span:not(.pull-right), //:not(.pull-right-container),
+      > a > span:not(.float-right), //:not(.float-right-container),
       > .treeview-menu {
         display: block !important;
         position: absolute;
@@ -109,7 +109,7 @@
         padding: 12px 5px 12px 20px;
         background-color: inherit;
       }
-      > a > .pull-right-container {
+      > a > .float-right-container {
         //display: block!important;
         position: relative !important;
         float: right;
@@ -159,7 +159,7 @@
 
 .sidebar-menu li > a {
   position: relative;
-  > .pull-right-container {
+  > .float-right-container {
     position: absolute;
     right: 10px;
     top: 50%;
