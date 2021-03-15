@@ -15,7 +15,7 @@
   top: 0;
   right: -@control-sidebar-width;
   width: @control-sidebar-width;
-  .transition(right @transition-speed ease-in-out);
+  transition: right @transition-speed ease-in-out;
 }
 
 // The sidebar
@@ -24,7 +24,7 @@
   padding-top: @navbar-height;
   z-index: 1010;
   // Fix position after header collapse
-  @media (max-width: @screen-xs-max) {
+  @media (max-width: @grid-breakpoints[xs]) {
     padding-top: @navbar-height + 50;
   }
   // Tab panes
@@ -54,7 +54,7 @@
   .control-sidebar {
     right: 0;
   }
-  @media (min-width: @screen-sm) {
+  @media (min-width: @grid-breakpoints[sm]) {
     .content-wrapper,
     .right-side,
     .main-footer {
@@ -84,7 +84,7 @@
       }
     }
     > a {
-      .border-radius(0);
+      #border-radius(0);
 
       // Hover and active states
       &,
@@ -113,7 +113,7 @@
     }
   }
   // Remove responsiveness on small screens
-  @media (max-width: @screen-sm) {
+  @media (max-width: @grid-breakpoints[sm]) {
     display: table;
     > li {
       display: table-cell;
@@ -142,7 +142,7 @@
   padding: 0;
   margin: 0 -15px;
   > li > a {
-    .clearfix();
+    #clearfix();
     display: block;
     padding: 10px 15px;
     > .control-sidebar-subheading {

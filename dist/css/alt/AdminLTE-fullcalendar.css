@@ -63,20 +63,12 @@
   line-height: 30px;
 }
 .fc-color-picker > li .fa {
-  -webkit-transition: -webkit-transform linear 0.3s;
-  -moz-transition: -moz-transform linear 0.3s;
-  -o-transition: -o-transform linear 0.3s;
-  transition: transform linear 0.3s;
+  transition: transform(linear 0.3s);
 }
 .fc-color-picker > li .fa:hover {
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
 #add-new-event {
-  -webkit-transition: all linear 0.3s;
-  -o-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }
 .external-event {

@@ -9,7 +9,7 @@
   z-index: 1030;
   //Navbar
   .navbar {
-    .transition(margin-left @transition-speed @transition-fn);
+    transition: margin-left @transition-speed @transition-fn;
     margin-bottom: 0;
     margin-left: @sidebar-width;
     border: none;
@@ -43,7 +43,7 @@
   .navbar-custom-menu,
   .navbar-right {
     float: right;
-    @media (max-width: @screen-sm-max) {
+    @media (max-width: @grid-breakpoints[sm]-max) {
       a {
         color: inherit;
         background: transparent;
@@ -68,7 +68,7 @@
     float: left;
     background-color: transparent;
     background-image: none;
-    padding: @navbar-padding-vertical @navbar-padding-horizontal;
+    padding: @navbar-padding-y @navbar-padding-x;
     //Add the fontawesome bars icon
     font-family: fontAwesome;
     &:before {
@@ -115,7 +115,7 @@
 
   //Logo bar
   .logo {
-    .transition(width @transition-speed @transition-fn);
+    transition: width @transition-speed @transition-fn;
     display: block;
     float: left;
     height: @navbar-height;
@@ -202,7 +202,7 @@
     position: absolute;
     top: 15px;
     right: 10px;
-    .border-radius(2px);
+    #border-radius(2px);
     > li > a {
       color: #444;
       text-decoration: none;
@@ -216,7 +216,7 @@
     }
   }
 
-  @media (max-width: @screen-sm-max) {
+  @media (max-width: @grid-breakpoints[sm]-max) {
     > .breadcrumb {
       position: relative;
       margin-top: 5px;
@@ -236,11 +236,11 @@
   color: #fff;
   border: 0;
   margin: 0;
-  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  padding: @navbar-padding-y @navbar-padding-x;
 }
 
 //Control navbar scaffolding on x-small screens
-@media (max-width: @screen-sm-max) {
+@media (max-width: @grid-breakpoints[sm]-max) {
   .navbar-custom-menu .navbar-nav > li {
     float: left;
   }
@@ -277,7 +277,7 @@
 }
 
 .navbar-collapse.pull-left {
-  @media (max-width: @screen-sm-max) {
+  @media (max-width: @grid-breakpoints[sm]-max) {
     float: none !important;
     + .navbar-custom-menu {
       display: block;

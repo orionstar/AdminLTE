@@ -3,8 +3,14 @@
  * ---------------------
  */
 // Import variables and mixins as a reference for separate plugins version
-@import (reference) "../bootstrap-less/mixins";
-@import (reference) "../bootstrap-less/variables";
+@import (reference) "bootstrap-less-port/less/_functions";
+@import (reference) "bootstrap-less-port/less/_variables";
+@import (reference) "bootstrap-less-port/less/_mixins";
+
+// BS3 Compatibility
+//--------------------------------------------------------
+@import "bs3-compat/_variables.less";
+
 @import (reference) "variables";
 @import (reference) "mixins";
 
@@ -80,16 +86,16 @@
     margin-right: 5px;
     line-height: 30px;
     .fa {
-      .transition-transform(linear .3s);
+      transition: transform(linear .3s);
       &:hover {
-        .rotate(30deg);
+        transform: rotate(30deg);
       }
     }
   }
 }
 
 #add-new-event {
-  .transition(all linear .3s);
+  transition: all linear .3s;
 }
 
 .external-event {

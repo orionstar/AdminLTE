@@ -4,8 +4,8 @@
 
 //Add sidebar-mini class to the body tag to activate this feature
 .sidebar-mini {
-  //Sidebar mini should work only on devices larger than @screen-sm
-  @media (min-width: @screen-sm) {
+  //Sidebar mini should work only on devices larger than @grid-breakpoints[sm]
+  @media (min-width: @grid-breakpoints[sm]) {
     //When the sidebar is collapsed...
     &.sidebar-collapse {
 
@@ -20,7 +20,7 @@
       //Modify the sidebar to shrink instead of disappearing
       .main-sidebar {
         //Don't go away! Just shrink
-        .translate(0, 0);
+        transform: translate(0, 0);
         width: 50px !important;
         z-index: 850;
       }
@@ -87,7 +87,7 @@
   }
 }
 
-@media (min-width: @screen-sm) {
+@media (min-width: @grid-breakpoints[sm]) {
   // Show menu items on hover
   .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse {
     .sidebar-menu > li:hover {

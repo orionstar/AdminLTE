@@ -19,7 +19,7 @@ body {
 
 /* Layout */
 .wrapper {
-  .clearfix();
+  #clearfix();
   height: 100%;
   position: relative;
   overflow-x: hidden;
@@ -42,29 +42,27 @@ body {
  */
 .content-wrapper,
 .main-footer {
-  // Using disposable variable to join statements with a comma
-  @transition-rule: @transition-speed @transition-fn,
-  margin @transition-speed @transition-fn;
-  .transition-transform(@transition-rule);
+  transition: @transition-speed @transition-fn;
+  margin: @transition-speed @transition-fn;
   margin-left: @sidebar-width;
   z-index: 820;
   // Top nav layout
   .layout-top-nav & {
     margin-left: 0;
   }
-  @media (max-width: @screen-xs-max) {
+  @media (max-width: @grid-breakpoints[xs]) {
     margin-left: 0;
   }
   // When opening the sidebar on large screens
   .sidebar-collapse & {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @grid-breakpoints[sm]) {
       margin-left: 0;
     }
   }
   // When opening the sidebar on small screens
   .sidebar-open & {
-    @media (max-width: @screen-xs-max) {
-      .translate(@sidebar-width, 0);
+    @media (max-width: @grid-breakpoints[xs]) {
+      transform: translate(@sidebar-width, 0);
     }
   }
 }
@@ -127,7 +125,7 @@ body {
   .main-header .logo,
   .menu-open .fa-angle-left {
     /* Fix for IE */
-    .transition(none);
+    transition: none;
   }
 }
 
@@ -135,7 +133,7 @@ body {
 .content {
   min-height: 250px;
   padding: 15px;
-  .container-fixed(@grid-gutter-width);
+  #make-container(@grid-gutter-width);
 }
 
 /* H1 - H6 font */

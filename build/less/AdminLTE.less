@@ -1,5 +1,5 @@
 /*!
- * AdminLTE v2.4.18
+ * AdminLTE v2.5.0
  * 
  *   Author:  Colorlib
  *   Support: <https://github.com/ColorlibHQ/AdminLTE/issues>
@@ -9,14 +9,20 @@
 
 // Bootstrap
 //--------------------------------------------------------
-@import (reference) "../bootstrap-less/mixins";
-@import (reference) "../bootstrap-less/variables";
+@import (reference) "bootstrap-less-port/less/_functions";
+@import (reference) "bootstrap-less-port/less/_variables";
+@import (reference) "bootstrap-less-port/less/_mixins";
+
+// BS3 Compatibility
+//--------------------------------------------------------
+@import "bs3-compat/_progress-bars.less";
+@import "bs3-compat/_variables.less";
 
 // MISC
 //--------------------------------------------------------
-@import "core";
 @import "variables";
 @import "mixins";
+@import "core";
 
 // COMPONENTS
 //--------------------------------------------------------

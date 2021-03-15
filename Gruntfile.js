@@ -42,6 +42,7 @@ module.exports = function (grunt) { // jshint ignore:line
       // Development not compressed
       development  : {
         files: {
+          'dist/css/bootstrap4.min.css'               : 'build/less/Bootstrap4.less',
           // compilation.css  :  source.less
           'dist/css/AdminLTE.css'                     : 'build/less/AdminLTE.less',
           // AdminLTE without plugins
@@ -58,6 +59,7 @@ module.exports = function (grunt) { // jshint ignore:line
           compress: true
         },
         files  : {
+          'dist/css/bootstrap4.min.css'                   : 'build/less/Bootstrap4.less',
           // compilation.css  :  source.less
           'dist/css/AdminLTE.min.css'                     : 'build/less/AdminLTE.less',
           // AdminLTE without plugins
@@ -269,6 +271,17 @@ module.exports = function (grunt) { // jshint ignore:line
     // for them
     clean: {
       build: ['build/img/*']
+    },
+
+    copy: {
+      files: {
+          cwd: './',
+          expand: true,
+          flatten: true,
+          src: ['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js'],
+          dest: 'dist/js/',
+          filter: 'isFile'
+      }
     }
   });
 
@@ -299,6 +312,8 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.loadNpmTasks('grunt-notify');
   // Replace
   grunt.loadNpmTasks('grunt-text-replace');
+  // Copy
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
