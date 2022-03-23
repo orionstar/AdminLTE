@@ -94,7 +94,7 @@
     display: none;
   }
   //Navbar User Menu
-  .navbar .nav > li.user > a {
+  .navbar .nav > .nav-item.user > .nav-link {
     > .fa,
     > .glyphicon,
     > .ion {
@@ -103,7 +103,7 @@
   }
 
   //Labels in navbar
-  .navbar .nav > li > a > .label {
+  .navbar .nav > .nav-item > .nav-link > .badge {
     position: absolute;
     top: 9px;
     right: 7px;
@@ -203,7 +203,7 @@
     top: 15px;
     right: 10px;
     #border-radius(2px);
-    > li > a {
+    > .breadcrumb-item > a {
       color: #444;
       text-decoration: none;
       display: inline-block;
@@ -211,7 +211,7 @@
         margin-right: 5px;
       }
     }
-    > li + li:before {
+    > .breadcrumb-item + .breadcrumb-item:before {
       content: '>\00a0';
     }
   }
@@ -225,7 +225,7 @@
       float: none;
       background: @gray-lte;
       padding-left: 10px;
-      li:before {
+      .breadcrumb-item:before {
         color: darken(@gray-lte, 20%);
       }
     }
@@ -241,7 +241,7 @@
 
 //Control navbar scaffolding on x-small screens
 @media (max-width: @grid-breakpoints[sm]-max) {
-  .navbar-custom-menu .navbar-nav > li {
+  .navbar-custom-menu .navbar-nav > .nav-item {
     float: left;
   }
 
@@ -251,7 +251,7 @@
     float: left;
   }
 
-  .navbar-custom-menu .navbar-nav > li > a {
+  .navbar-custom-menu .navbar-nav > .nav-item > .nav-link {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;

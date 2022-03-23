@@ -5,16 +5,16 @@
 .skin-purple .main-header .navbar {
   background-color: #605ca8;
 }
-.skin-purple .main-header .navbar .nav > li > a {
+.skin-purple .main-header .navbar .nav > .nav-item > .nav-link {
   color: #fff;
 }
-.skin-purple .main-header .navbar .nav > li > a:hover,
-.skin-purple .main-header .navbar .nav > li > a:active,
-.skin-purple .main-header .navbar .nav > li > a:focus,
+.skin-purple .main-header .navbar .nav > .nav-item > .nav-link:hover,
+.skin-purple .main-header .navbar .nav > .nav-item > .nav-link:active,
+.skin-purple .main-header .navbar .nav > .nav-item > .nav-link:focus,
 .skin-purple .main-header .navbar .nav .open > a,
 .skin-purple .main-header .navbar .nav .open > a:hover,
 .skin-purple .main-header .navbar .nav .open > a:focus,
-.skin-purple .main-header .navbar .nav > .active > a {
+.skin-purple .main-header .navbar .nav > .nav-item > .nav-link.active {
   background: rgba(0, 0, 0, 0.1);
   color: #f6f6f6;
 }

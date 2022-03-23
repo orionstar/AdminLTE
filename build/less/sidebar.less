@@ -84,7 +84,7 @@
     position: relative;
     margin: 0;
     padding: 0;
-    > a {
+    > .nav-link {
       padding: 12px 5px 12px 15px;
       display: block;
       > .fa,
@@ -93,7 +93,6 @@
         width: 20px;
       }
     }
-    .label,
     .badge {
       margin-right: 5px;
     }
@@ -102,15 +101,15 @@
     padding: 10px 25px 10px 15px;
     font-size: 12px;
   }
-  li > a > .fa-angle-left,
-  li > a > .float-right-container > .fa-angle-left {
+  li > .nav-link > .fa-angle-left,
+  li > .nav-link > .float-right-container > .fa-angle-left {
     width: auto;
     height: auto;
     padding: 0;
     margin-right: 10px;
     transition: transform .5s ease;
   }
-  li > a > .fa-angle-left {
+  li > .nav-link > .fa-angle-left {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -118,8 +117,8 @@
   }
 
   .menu-open {
-    > a > .fa-angle-left,
-    > a > .float-right-container > .fa-angle-left {
+    > .nav-link > .fa-angle-left,
+    > .nav-link > .float-right-container > .fa-angle-left {
       transform: rotate(-90deg);
     }
   }
