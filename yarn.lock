@@ -2266,11 +2266,6 @@
   "resolved" "https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz"
   "version" "1.0.1"
 
-"growl@^1.10.5":
-  "integrity" "sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA=="
-  "resolved" "https://registry.npmjs.org/growl/-/growl-1.10.5.tgz"
-  "version" "1.10.5"
-
 "grunt-bootlint@*":
   "integrity" "sha512-t5hOcFdy/pwqP9uH3DOLMbMIN4HXiYAgPu3yRowndgU70ssjgDuC7jG7xXvnmyQ535leyQPgqknJk72ht/xorw=="
   "resolved" "https://registry.npmjs.org/grunt-bootlint/-/grunt-bootlint-1.1.0.tgz"
@@ -2460,15 +2455,6 @@
   "version" "0.1.7"
   dependencies:
     "less" "~1.3"
-
-"grunt-notify@*":
-  "integrity" "sha1-BSk5kGFhENtrwK0V5sBZL/4YrDE="
-  "resolved" "https://registry.npmjs.org/grunt-notify/-/grunt-notify-0.4.5.tgz"
-  "version" "0.4.5"
-  dependencies:
-    "semver" "^5.1.0"
-    "stack-parser" "^0.0.1"
-    "which" "^1.2.4"
 
 "grunt-text-replace@*":
   "integrity" "sha1-252c5Z4v5J2id+nbwZXD4Rz7FsI="
@@ -4925,11 +4911,6 @@
   dependencies:
     "semver" "^5.3.0"
 
-"semver@^5.1.0":
-  "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
-  "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
-  "version" "5.7.1"
-
 "semver@^5.3.0":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
@@ -5210,11 +5191,6 @@
   "integrity" "sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w=="
   "resolved" "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
   "version" "0.1.8"
-
-"stack-parser@^0.0.1":
-  "integrity" "sha1-fTtjoXiH6eLCv1Xb0zGP40o50ec="
-  "resolved" "https://registry.npmjs.org/stack-parser/-/stack-parser-0.0.1.tgz"
-  "version" "0.0.1"
 
 "stack-trace@0.0.x":
   "integrity" "sha1-VHxws0fo0ytOEI6hoqFZ5f3eGcA="
@@ -5866,7 +5842,7 @@
     "has-tostringtag" "^1.0.0"
     "is-typed-array" "^1.1.7"
 
-"which@^1.2.14", "which@^1.2.4", "which@^1.2.9":
+"which@^1.2.14", "which@^1.2.9":
   "integrity" "sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ=="
   "resolved" "https://registry.npmjs.org/which/-/which-1.3.1.tgz"
   "version" "1.3.1"

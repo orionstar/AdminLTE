@@ -5,7 +5,7 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.initConfig({
     pkg   : grunt.file.readJSON('package.json'),
     copy: {
-      pages: {
+      js_pages: {
         files: [{
             expand: true,
             flatten: true,
@@ -14,7 +14,7 @@ module.exports = function (grunt) { // jshint ignore:line
             filter: 'isFile'
         }]
       },
-      demo: {
+      js_demo: {
         files: [{
             expand: true,
             flatten: true,
@@ -32,32 +32,17 @@ module.exports = function (grunt) { // jshint ignore:line
       less: {
         // Compiles less files upon saving
         files: ['build/less/*.less'],
-        tasks: ['less:development', 'less:production', 'replace', 'notify:less']
+        tasks: ['less:development', 'less:production', 'replace']
       },
       js: {
         // Compile js files upon saving
         files: ['build/js/*.js'],
-        tasks: ['copy', 'notify:js']
+        tasks: ['copy', 'js']
       },
       skins: {
         // Compile any skin less files upon saving
         files: ['build/less/skins/*.less'],
-        tasks: ['less:skins', 'less:minifiedSkins', 'notify:less']
-      }
-    },
-    // Notify end of tasks
-    notify: {
-      less: {
-        options: {
-          title  : 'AdminLTE',
-          message: 'LESS finished running'
-        }
-      },
-      js  : {
-        options: {
-          title  : 'AdminLTE',
-          message: 'JS bundler finished running'
-        }
+        tasks: ['less:skins', 'less:minifiedSkins']
       }
     },
     // 'less'-task configuration
@@ -139,11 +124,15 @@ module.exports = function (grunt) { // jshint ignore:line
     uglify: {
       options   : {
         mangle : true,
-        output: {
-          comments: 'some'
-        }
+        stripBanners: true,
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        sourceMap: true,
+        preserveComments: 'all'
       },
       production: {
+        options   : {
+          preserveComments: false
+        },
         files: {
           'dist/js/vendor.min.js': ['dist/js/vendor.js'],
           'dist/js/adminlte.min.js': ['dist/js/adminlte.js']
@@ -154,7 +143,11 @@ module.exports = function (grunt) { // jshint ignore:line
     // Concatenate JS Files
     concat: {
       options: {
-        separator: '\n\n'
+        separator: '\n\n',
+        stripBanners: true,
+        sourceMap: true,
+        sourceMapIncludeSources : true,
+        sourceMapIn : 'dist/js/sourcemap.js.map'
       },
       dist   : {
         src : [
@@ -315,8 +308,6 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.loadNpmTasks('grunt-contrib-concat');
   // Copy
   grunt.loadNpmTasks('grunt-contrib-copy');
-  // Notify
-  grunt.loadNpmTasks('grunt-notify');
   // Replace
   grunt.loadNpmTasks('grunt-text-replace');
 
@@ -327,7 +318,7 @@ module.exports = function (grunt) { // jshint ignore:line
   // CSS Task
   grunt.registerTask('css', ['less:development', 'less:production', 'replace']);
   // Prod Task
-  grunt.registerTask('prod', ['copy', 'image', 'less:production', 'less:skins', 'replace', 'js']);
+  grunt.registerTask('prod', ['copy', 'image', 'less:production', 'less:minifiedSkins', 'replace', 'js']);
 
   // The default task (running 'grunt' in console) is 'watch'
   grunt.registerTask('default', ['watch']);
