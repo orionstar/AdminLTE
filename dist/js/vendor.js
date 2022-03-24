@@ -17852,5 +17852,4 @@ return jQuery;
   Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
-
-//# sourceMappingURL=vendor.js.map
+//# sourceMappingURL=bootstrap.bundle.js.map

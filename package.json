@@ -24,7 +24,6 @@
 		"grunt-includes": "^1.1.0",
 		"grunt-jscs": "^3.0.1",
 		"grunt-less": "^0.1.7",
-		"grunt-text-replace": "^0.4.0",
 		"less": "^3.13.1",
 		"R2": "^1.4.3"
 	},
