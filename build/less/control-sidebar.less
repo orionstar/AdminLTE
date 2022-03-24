@@ -75,7 +75,9 @@
 
 // Control sidebar tabs
 .nav-tabs.control-sidebar-tabs {
+  > .nav-item,
   > li {
+    &:first-of-type > .nav-link,
     &:first-of-type > a {
       &,
       &:hover,
@@ -83,8 +85,9 @@
         border-left-width: 0;
       }
     }
+    > .nav-link,
     > a {
-      #border-radius(0);
+      .border-radius(0);
 
       // Hover and active states
       &,
@@ -99,8 +102,9 @@
       }
     }
     // Active state
-    &.active {
-      > a {
+    & {
+      > .nav-link.active,
+      > a.active {
         &,
         &:hover,
         &:focus,
@@ -126,7 +130,7 @@
   font-weight: 400;
   font-size: 16px;
   padding: 10px 0;
-  margin-bottom: 10px;
+  margin: 20px 0 10px;
 }
 
 // Subheadings
@@ -141,7 +145,9 @@
   list-style: none;
   padding: 0;
   margin: 0 -15px;
-  > .nav-item > .nav-link {
+  > .nav-item,
+  li > .nav-link,
+  li > a {
     #clearfix();
     display: block;
     padding: 10px 15px;
@@ -184,7 +190,9 @@
   //  Sidebar tabs
   .nav-tabs.control-sidebar-tabs {
     border-bottom: darken(@sidebar-dark-bg, 3%);
+    > .nav-item,
     > li {
+      > .nav-link,
       > a {
         background: darken(@sidebar-dark-bg, 5%);
         color: @sidebar-dark-color;
@@ -205,15 +213,13 @@
         }
       }
       // Active state
-      &.active {
-        > a {
-          &,
-          &:hover,
-          &:focus,
-          &:active {
-            background: @sidebar-dark-bg;
-            color: #fff;
-          }
+      & .nav-link.active {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          background: @sidebar-dark-bg;
+          color: #fff;
         }
       }
     }
@@ -225,7 +231,9 @@
   }
   // Sidebar list
   .control-sidebar-menu {
+    > .nav-item,
     > li {
+      > .nav-link,
       > a {
         &:hover {
           background: @sidebar-dark-hover-bg;
@@ -250,9 +258,12 @@
     border-left: 1px solid @gray-lte;
   }
   //  Sidebar tabs
+
   .nav-tabs.control-sidebar-tabs {
     border-bottom: @gray-lte;
+    > .nav-item,
     > li {
+      > .nav-link,
       > a {
         background: darken(@sidebar-light-bg, 5%);
         color: @sidebar-light-color;
@@ -271,6 +282,7 @@
       }
       // Active state
       &.active {
+        > .nav-link,
         > a {
           &,
           &:hover,
@@ -291,7 +303,9 @@
   // Sidebar list
   .control-sidebar-menu {
     margin-left: -14px;
+    > .nav-item,
     > li {
+      > .nav-link,
       > a {
         &:hover {
           background: @sidebar-light-hover-bg;

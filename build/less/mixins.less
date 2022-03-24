@@ -68,14 +68,13 @@
   }
 }
 
-//border radius creator
-#border-radius(@radius) {
+///border radius creator
+.border-radius(@radius) {
   border-radius: @radius;
 }
 
 //Different radius each side
-#border-radius(@top-left,  @top-right,  @bottom-left,  @bottom-right)
-{
+.border-radius(@top-left,  @top-right,  @bottom-left,  @bottom-right)  {
   border-top-left-radius: @top-left;
   border-top-right-radius: @top-right;
   border-bottom-right-radius: @bottom-right;
@@ -131,7 +130,7 @@
     }
     //Hover and active states
     &:hover > .nav-link,
-    &.active > .nav-link,
+    & > .nav-link.active,
     &.menu-open > .nav-link {
       color: @sidebar-dark-hover-color;
       background: @sidebar-dark-hover-bg;
@@ -165,7 +164,7 @@
   }
   //The sidebar search form
   .sidebar-form {
-    #border-radius(3px);
+    .border-radius(3px);
     border: 1px solid lighten(@sidebar-dark-bg, 10%);
     margin: 10px 10px;
 
@@ -184,7 +183,7 @@
 
     input[type="text"] {
       color: #666;
-      #border-radius(2px, 0, 2px, 0);
+      .border-radius(2px, 0, 2px, 0);
 
       &:focus,
       &:focus + .input-group-append .btn {
@@ -198,7 +197,7 @@
 
     .btn {
       color: #999;
-      #border-radius(0, 2px, 0, 2px);
+      .border-radius(0, 2px, 0, 2px);
       border: 1px solid transparent;
     }
   }
@@ -283,7 +282,7 @@
   }
   //The sidebar search form
   .sidebar-form {
-    #border-radius(3px);
+    .border-radius(3px);
     border: 1px solid @gray-lte;  //darken(@sidebar-light-bg, 5%);
     margin: 10px 10px;
 
@@ -302,7 +301,7 @@
 
     input[type="text"] {
       color: #666;
-      #border-radius(2px, 0, 2px, 0);
+      .border-radius(2px, 0, 2px, 0);
 
       &:focus,
       &:focus + .input-group-append .btn {
@@ -316,7 +315,7 @@
 
     .btn {
       color: #999;
-      #border-radius(0, 2px, 0, 2px);
+      .border-radius(0, 2px, 0, 2px);
       border: 1px solid transparent;
     }
   }

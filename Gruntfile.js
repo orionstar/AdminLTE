@@ -4,16 +4,40 @@ module.exports = function (grunt) { // jshint ignore:line
 
   grunt.initConfig({
     pkg   : grunt.file.readJSON('package.json'),
+    copy: {
+      pages: {
+        files: [{
+            expand: true,
+            flatten: true,
+            src: './build/js/pages/**',
+            dest: './dist/js/pages/',
+            filter: 'isFile'
+        }]
+      },
+      demo: {
+        files: [{
+            expand: true,
+            flatten: true,
+            src: './build/js/demo.js',
+            dest: './dist/js/',
+            filter: 'isFile'
+        }]
+      }
+    },
     watch : {
-      less : {
+      image: {
+        files: ['build/img/*.{png,jpg,gif,svg,jpeg}'],
+        tasks: ['image']
+      },
+      less: {
         // Compiles less files upon saving
         files: ['build/less/*.less'],
         tasks: ['less:development', 'less:production', 'replace', 'notify:less']
       },
-      js   : {
+      js: {
         // Compile js files upon saving
         files: ['build/js/*.js'],
-        tasks: ['js', 'notify:js']
+        tasks: ['copy', 'notify:js']
       },
       skins: {
         // Compile any skin less files upon saving
@@ -117,10 +141,11 @@ module.exports = function (grunt) { // jshint ignore:line
         mangle : true,
         output: {
           comments: 'some'
-        },
+        }
       },
       production: {
         files: {
+          'dist/js/vendor.min.js': ['dist/js/vendor.js'],
           'dist/js/adminlte.min.js': ['dist/js/adminlte.js']
         }
       }
@@ -129,23 +154,7 @@ module.exports = function (grunt) { // jshint ignore:line
     // Concatenate JS Files
     concat: {
       options: {
-        separator: '\n\n',
-        banner   : '/*! AdminLTE app.js\n'
-        + '* ================\n'
-        + '* Main JS application file for AdminLTE v2. This file\n'
-        + '* should be included in all pages. It controls some layout\n'
-        + '* options and implements exclusive AdminLTE plugins.\n'
-        + '*\n'
-        + '* @author Colorlib\n'
-        + '* @support <https://github.com/ColorlibHQ/AdminLTE/issues>\n'
-        + '* @version <%= pkg.version %>\n'
-        + '* @repository <%= pkg.repository.url %>\n'
-        + '* @license MIT <http://opensource.org/licenses/MIT>\n'
-        + '*/\n\n'
-        + '// Make sure jQuery has been loaded\n'
-        + 'if (typeof jQuery === \'undefined\') {\n'
-        + 'throw new Error(\'AdminLTE requires jQuery\')\n'
-        + '}\n\n'
+        separator: '\n\n'
       },
       dist   : {
         src : [
@@ -156,9 +165,16 @@ module.exports = function (grunt) { // jshint ignore:line
           'build/js/PushMenu.js',
           'build/js/TodoList.js',
           'build/js/Tree.js',
-          'build/js/Layout.js',
+          'build/js/Layout.js'
         ],
         dest: 'dist/js/adminlte.js'
+      },
+      vendor   : {
+        src : [
+          'node_modules/jquery/dist/jquery.js',
+          'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+        ],
+        dest: 'dist/js/vendor.js'
       }
     },
 
@@ -270,21 +286,7 @@ module.exports = function (grunt) { // jshint ignore:line
     // After compressing the images in the build/img dir, there is no need
     // for them
     clean: {
-      build: ['build/img/*']
-    },
-
-    copy: {
-      files: {
-          cwd: './',
-          expand: true,
-          flatten: true,
-          src: [
-            'node_modules/bootstrap/dist/js/bootstrap.min.js', 
-            'node_modules/jquery/dist/jquery.min.js'
-          ],
-          dest: 'dist/js/',
-          filter: 'isFile'
-      }
+      dist: ['dist']
     }
   });
 
@@ -311,12 +313,12 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.loadNpmTasks('grunt-bootlint');
   // Concatenate JS files
   grunt.loadNpmTasks('grunt-contrib-concat');
+  // Copy
+  grunt.loadNpmTasks('grunt-contrib-copy');
   // Notify
   grunt.loadNpmTasks('grunt-notify');
   // Replace
   grunt.loadNpmTasks('grunt-text-replace');
-  // Copy
-  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
@@ -324,6 +326,8 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.registerTask('js', ['concat', 'uglify']);
   // CSS Task
   grunt.registerTask('css', ['less:development', 'less:production', 'replace']);
+  // Prod Task
+  grunt.registerTask('prod', ['copy', 'image', 'less:production', 'less:skins', 'replace', 'js']);
 
   // The default task (running 'grunt' in console) is 'watch'
   grunt.registerTask('default', ['watch']);

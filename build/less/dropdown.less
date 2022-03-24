@@ -31,8 +31,15 @@
 .navbar-nav > .tasks-menu {
   //fix width and padding
   > .dropdown-menu {
-    > li {
+    > .dropdown-item {
       position: relative;
+
+      &:hover,
+      &:focus {
+        color: #212529;
+        text-decoration: inherit;
+        background-color: transparent;
+      }
     }
     width: 280px;
     //Remove padding and margins
@@ -41,8 +48,8 @@
     top: 100%;
   }
   //Define header class
-  > .dropdown-menu > li.header {
-    #border-radius(4px; 4px; 0; 0);
+  > .dropdown-menu > .dropdown-item.header {
+    .border-radius(4px; 4px; 0; 0);
     background-color: #ffffff;
     padding: 7px 10px;
     border-bottom: 1px solid #f4f4f4;
@@ -51,8 +58,8 @@
   }
 
   //Define footer class
-  > .dropdown-menu > li.footer > a {
-    #border-radius(0; 0; 4px; 4px);
+  > .dropdown-menu > .dropdown-item.footer > a {
+    .border-radius(0; 0; 4px; 4px);
     font-size: 12px;
     background-color: #fff;
     padding: 7px 10px;
@@ -71,20 +78,21 @@
   }
 
   //Clear inner menu padding and margins
-  > .dropdown-menu > li .menu {
+  > .dropdown-menu > .dropdown-item .menu {
     max-height: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
     overflow-x: hidden;
-    > .dropdown-item > a {
+    > .nav-item > .nav-link {
       display: block;
       white-space: nowrap; /* Prevent text from breaking */
       border-bottom: 1px solid #f4f4f4;
       // Hove state
       &:hover {
-        background: #f4f4f4;
+        color: #16181b;
         text-decoration: none;
+        background-color: #f8f9fa;
       }
     }
   }
@@ -92,9 +100,9 @@
 
 //Notifications menu
 .navbar-nav > .notifications-menu {
-  > .dropdown-menu > li .menu {
+  > .dropdown-menu > .dropdown-item .menu {
     // Links inside the menu
-    > .dropdown-item > a {
+    > li > a {
       color: #444444;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -113,9 +121,9 @@
 //Messages menu
 .navbar-nav > .messages-menu {
   //Inner menu
-  > .dropdown-menu > li .menu {
+  > .dropdown-menu > .dropdown-item .menu {
     // Messages menu item
-    > .dropdown-item > a {
+    > .nav-item > .nav-link {
       margin: 0;
       //line-height: 20px;
       padding: 10px 10px;
@@ -157,20 +165,26 @@
 
 //Tasks menu
 .navbar-nav > .tasks-menu {
-  > .dropdown-menu > li .menu {
-    > .dropdown-item > a {
-      padding: 10px;
+  .dropdown-menu > .dropdown-item {
+    & > .menu {
+      .nav-item {
+        width: 100%;
 
-      > h3 {
-        font-size: 14px;
-        padding: 0;
-        margin: 0 0 10px 0;
-        color: #666666;
-      }
+        .nav-link {
+          padding: 10px;
 
-      > .progress {
-        padding: 0;
-        margin: 0;
+          h3 {
+            font-size: 14px;
+            padding: 0;
+            margin: 0 0 10px 0;
+            color: #666666;
+          }
+
+          .progress {
+            padding: 0;
+            margin: 0;
+          }
+        }
       }
     }
   }
