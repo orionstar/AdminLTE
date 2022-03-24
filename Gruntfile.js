@@ -22,7 +22,8 @@ module.exports = function (grunt) { // jshint ignore:line
             dest: './dist/js/',
             filter: 'isFile'
         }]
-      }
+      },
+      plugins: {}
     },
     watch : {
       image: {
@@ -37,7 +38,7 @@ module.exports = function (grunt) { // jshint ignore:line
       js: {
         // Compile js files upon saving
         files: ['build/js/*.js'],
-        tasks: ['copy', 'js']
+        tasks: ['copy:js_pages','copy:js_demo', 'js']
       },
       skins: {
         // Compile any skin less files upon saving
@@ -314,11 +315,11 @@ module.exports = function (grunt) { // jshint ignore:line
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
   // JS task
-  grunt.registerTask('js', ['concat', 'uglify']);
+  grunt.registerTask('js', ['concat:dist', 'concat:vendor', 'uglify:production']);
   // CSS Task
   grunt.registerTask('css', ['less:development', 'less:production', 'replace']);
   // Prod Task
-  grunt.registerTask('prod', ['copy', 'image', 'less:production', 'less:minifiedSkins', 'replace', 'js']);
+  grunt.registerTask('prod', ['copy:js_pages','copy:js_demo', 'image', 'less:production', 'less:minifiedSkins', 'replace', 'js']);
 
   // The default task (running 'grunt' in console) is 'watch'
   grunt.registerTask('default', ['watch']);
