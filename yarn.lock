@@ -2043,15 +2043,6 @@
   "resolved" "https://registry.npmjs.org/fs-constants/-/fs-constants-1.0.0.tgz"
   "version" "1.0.0"
 
-"fs-extra@^6.0.1":
-  "integrity" "sha512-GnyIkKhhzXZUWFCaJzvyDLEEgDkPfb4/TPvJCJVuS8MWZgoSsErf++QpiAlDnKFcqhRlm+tIOcencCjyJE6ZCA=="
-  "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-6.0.1.tgz"
-  "version" "6.0.1"
-  dependencies:
-    "graceful-fs" "^4.1.2"
-    "jsonfile" "^4.0.0"
-    "universalify" "^0.1.0"
-
 "fs.realpath@^1.0.0":
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -2265,7 +2256,7 @@
     "url-parse-lax" "^3.0.0"
     "url-to-options" "^1.0.1"
 
-"graceful-fs@^4.1.10", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6":
+"graceful-fs@^4.1.10", "graceful-fs@^4.1.2":
   "integrity" "sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz"
   "version" "4.2.9"
@@ -2464,20 +2455,6 @@
   "version" "0.1.7"
   dependencies:
     "less" "~1.3"
-
-"grunt-sync@^0.8.2":
-  "integrity" "sha512-PB+xKI9YPyZn3NZQXpKHfZVlxHdf1L8GMl+Wi0mLhYypWuOdZPW2EzTmSuhhFbXjkb0aIOxvII1zdZZEl9zqGg=="
-  "resolved" "https://registry.npmjs.org/grunt-sync/-/grunt-sync-0.8.2.tgz"
-  "version" "0.8.2"
-  dependencies:
-    "fs-extra" "^6.0.1"
-    "glob" "^7.0.5"
-    "md5-file" "^2.0.3"
-
-"grunt-text-replace@^0.4.0":
-  "integrity" "sha1-252c5Z4v5J2id+nbwZXD4Rz7FsI="
-  "resolved" "https://registry.npmjs.org/grunt-text-replace/-/grunt-text-replace-0.4.0.tgz"
-  "version" "0.4.0"
 
 "grunt@^1.3.0", "grunt@^1.4.1", "grunt@>=0.4.5", "grunt@>=1.0.0", "grunt@>=1.0.4", "grunt@>=1.4.1":
   "integrity" "sha512-ZXIYXTsAVrA7sM+jZxjQdrBOAg7DyMUplOMhTaspMRExei+fD0BTwdWXnn0W5SXqhb/Q/nlkzXclSi3IH55PIA=="
@@ -3329,13 +3306,6 @@
   "resolved" "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.0.tgz"
   "version" "3.0.0"
 
-"jsonfile@^4.0.0":
-  "integrity" "sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss="
-  "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz"
-  "version" "4.0.0"
-  optionalDependencies:
-    "graceful-fs" "^4.1.6"
-
 "jsonlint@~1.6.2":
   "integrity" "sha512-jMVTMzP+7gU/IyC6hvKyWpUU8tmTkK5b3BPNuMI9U8Sit+YAWLlZwB6Y6YrdCxfg2kNz05p3XY3Bmm4m26Nv3A=="
   "resolved" "https://registry.npmjs.org/jsonlint/-/jsonlint-1.6.3.tgz"
@@ -3683,11 +3653,6 @@
     "gzip-size" "^5.1.1"
     "pretty-bytes" "^5.3.0"
 
-"md5-file@^2.0.3":
-  "integrity" "sha1-MH94vQTMsFTkZ+xmHPpamv3J8hA="
-  "resolved" "https://registry.npmjs.org/md5-file/-/md5-file-2.0.7.tgz"
-  "version" "2.0.7"
-
 "md5.js@^1.3.4":
   "integrity" "sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg=="
   "resolved" "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz"
@@ -3867,6 +3832,13 @@
   "integrity" "sha1-cldnE1z64Fmq51mZuyzmocXRtEs="
   "resolved" "https://registry.npmjs.org/morris.js/-/morris.js-0.5.0.tgz"
   "version" "0.5.0"
+
+"morris.js06@^0.6.9":
+  "integrity" "sha512-QlFRwZPaUrLZxGN/nj2uTUFst0JlTPhPRL2ePBf78brzHjz+gWGHlchmXkjDfvHr34YhfI4RHsT8+g6GsX8C9Q=="
+  "resolved" "https://registry.npmjs.org/morris.js06/-/morris.js06-0.6.9.tgz"
+  "version" "0.6.9"
+  dependencies:
+    "raphael" "^2.2.7"
 
 "mozjpeg@^7.0.0":
   "integrity" "sha512-iIDxWvzhWvLC9mcRJ1uSkiKaj4drF58oCqK2bITm5c2Jt6cJ8qQjSSru2PCaysG+hLIinryj8mgz5ZJzOYTv1A=="
@@ -4591,7 +4563,7 @@
     "randombytes" "^2.0.5"
     "safe-buffer" "^5.1.0"
 
-"raphael@^2.3.0":
+"raphael@^2.2.7", "raphael@^2.3.0":
   "integrity" "sha512-w2yIenZAQnp257XUWGni4bLMVxpUpcIl7qgxEgDIXtmSypYtlNxfXWpOBxs7LBTps5sDwhRnrToJrMUrivqNTQ=="
   "resolved" "https://registry.npmjs.org/raphael/-/raphael-2.3.0.tgz"
   "version" "2.3.0"
@@ -5661,11 +5633,6 @@
     "get-value" "^2.0.6"
     "is-extendable" "^0.1.1"
     "set-value" "^2.0.1"
-
-"universalify@^0.1.0":
-  "integrity" "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
-  "resolved" "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz"
-  "version" "0.1.2"
 
 "unquote@~1.1.1":
   "integrity" "sha1-j97XMk7G6IoP+LkF58CYzcCG1UQ="

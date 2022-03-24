@@ -23,7 +23,23 @@ module.exports = function (grunt) { // jshint ignore:line
 					filter: 'isFile'
 				}]
 			},
-			plugins: {},
+			plugins: {
+				files: {
+					// Pace JS
+					'dist/plugins/pace-js/pace.css': 'node_modules/pace-js/themes/white/pace-theme-flash.css',
+					'dist/plugins/pace-js/pace.js': 'node_modules/pace-js/pace.js',
+
+					// Morris.js
+					'dist/plugins/morris.js06/morris.css': 'node_modules/morris.js06/dist/morris.css',
+					'dist/plugins/morris.js06/raphael.min.js': 'node_modules/morris.js06/examples/lib/raphael.min.js',
+					'dist/plugins/morris.js06/morris.js': 'node_modules/morris.js06/dist/morris.js',
+
+					// jqvmap
+					'dist/plugins/jqvmap/jqvmap.css': 'node_modules/jqvmap/dist/jqvmap.css',
+					'dist/plugins/jqvmap/maps/jquery.vmap.world.js': 'node_modules/jqvmap/dist/maps/jquery.vmap.world.js',
+					'dist/plugins/jqvmap/jquery.vmap.js': 'node_modules/jqvmap/dist/jquery.vmap.js'
+				}
+			},
 			images: {
 				files: [{
 					expand: true,
@@ -58,7 +74,7 @@ module.exports = function (grunt) { // jshint ignore:line
 				tasks: ['less:skins', 'less:minifiedSkins']
 			},
 			plugins: {
-				files: ['build/plugins/**/*'],
+				files: ['dist/plugins/**/*'],
 				tasks: ['plugins']
 			}
 		},
@@ -140,7 +156,16 @@ module.exports = function (grunt) { // jshint ignore:line
 				options: {
 					compress: true
 				},
-				files: {}
+				files: {
+					// Pace JS
+					'dist/plugins/pace-js/pace.min.css': 'dist/plugins/pace-js/pace.css',
+
+					// Morris.js
+					'dist/plugins/morris.js06/morris.min.css': 'dist/plugins/morris.js06/morris.css',
+
+					// jqvmap
+					'dist/plugins/jqvmap/jqvmap.min.css': 'dist/plugins/jqvmap/jqvmap.css'
+				}
 			}
 		},
 
@@ -157,15 +182,26 @@ module.exports = function (grunt) { // jshint ignore:line
 					preserveComments: false
 				},
 				files: {
-					'dist/js/vendor.min.js': ['dist/js/vendor.js'],
-					'dist/js/adminlte.min.js': ['dist/js/adminlte.js']
+					'dist/js/vendor.min.js': 'dist/js/vendor.js',
+					'dist/js/adminlte.min.js': 'dist/js/adminlte.js'
 				}
 			},
 			plugins: {
 				options: {
 					preserveComments: false
 				},
-				files: {}
+				files: {
+					// Pace JS
+					'dist/plugins/pace-js/pace.min.js': 'dist/plugins/pace-js/pace.js',
+
+					// Morris.js
+					'dist/plugins/morris.js06/raphael.min.js': 'dist/plugins/morris.js06/raphael.min.js',
+					'dist/plugins/morris.js06/morris.min.js': 'dist/plugins/morris.js06/morris.js',
+
+					// jqvmap
+					'dist/plugins/jqvmap/maps/jquery.vmap.world.min.js': 'dist/plugins/jqvmap/maps/jquery.vmap.world.js',
+					'dist/plugins/jqvmap/jquery.vmap.min.js': 'dist/plugins/jqvmap/jquery.vmap.js'
+				}
 			}
 		},
 

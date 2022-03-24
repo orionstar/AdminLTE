@@ -4457,6 +4457,15 @@ table.text-center th {
 .box .datepicker-inline .datepicker-days > table td.day.new {
   color: #777;
 }
+.pace .pace-activity {
+  right: 50% !important;
+}
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+  height: 15px;
+  width: 15px;
+  padding: 1px 2px;
+}
 /*
  * General: Miscellaneous
  * ----------------------

@@ -28,6 +28,16 @@ $(function () {
     zIndex              : 999999
   });
 
+  /* The todo list plugin */
+  $('.todo-list').todoList({
+    onCheck  : function () {
+      console.log($(this), 'The element has been checked');
+    },
+    onUnCheck: function () {
+      console.log($(this), 'The element has been unchecked');
+    }
+  });
+
   // bootstrap WYSIHTML5 - text editor
   $('.textarea').wysihtml5();
 
@@ -65,7 +75,7 @@ $(function () {
   };
   // World map by jvectormap
   $('#world-map').vectorMap({
-    map              : 'world_mill_en',
+    map              : 'world_en',
     backgroundColor  : 'transparent',
     regionStyle      : {
       initial: {
@@ -192,20 +202,10 @@ $(function () {
   });
 
   // Fix for charts under tabs
-  $('.box ul.nav a').on('shown.bs.tab', function () {
+  $('.nav-tabs-custom .nav .nav-link').on('shown.bs.tab', function () {
     area.redraw();
     donut.redraw();
     line.redraw();
-  });
-
-  /* The todo list plugin */
-  $('.todo-list').todoList({
-    onCheck  : function () {
-      window.console.log($(this), 'The element has been checked');
-    },
-    onUnCheck: function () {
-      window.console.log($(this), 'The element has been unchecked');
-    }
   });
 
 });
