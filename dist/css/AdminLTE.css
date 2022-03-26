@@ -2306,6 +2306,8 @@ a:focus {
   color: #444;
   border-color: #ddd;
 }
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:hover,
 .btn-secondary:active,
 .btn-secondary.hover {
