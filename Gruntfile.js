@@ -9,7 +9,7 @@ module.exports = function (grunt) { // jshint ignore:line
 				files: [{
 					expand: true,
 					flatten: true,
-					src: './build/js/pages/*',
+					src: './src/js/pages/*',
 					dest: './dist/js/pages/',
 					filter: 'isFile'
 				}]
@@ -18,7 +18,7 @@ module.exports = function (grunt) { // jshint ignore:line
 				files: [{
 					expand: true,
 					flatten: true,
-					src: './build/js/demo.js',
+					src: './src/js/demo.js',
 					dest: './dist/js/',
 					filter: 'isFile'
 				}]
@@ -43,7 +43,7 @@ module.exports = function (grunt) { // jshint ignore:line
 			images: {
 				files: [{
 					expand: true,
-					cwd: 'build/',
+					cwd: 'src/',
 					src: ['img/**/*.{png,jpg,gif,svg,jpeg}'],
 					dest: 'dist'
 				}]
@@ -51,7 +51,7 @@ module.exports = function (grunt) { // jshint ignore:line
 		},
 		watch: {
 			imageCopier: {
-				files: ['build/img/**/*.{png,jpg,gif,svg,jpeg}'],
+				files: ['src/img/**/*.{png,jpg,gif,svg,jpeg}'],
 				tasks: ['copy:images']
 			},
 			image: {
@@ -60,17 +60,17 @@ module.exports = function (grunt) { // jshint ignore:line
 			},
 			js: {
 				// Compile js files upon saving
-				files: ['build/js/*.js'],
+				files: ['src/js/*.js'],
 				tasks: ['js']
 			},
 			less: {
 				// Compiles less files upon saving
-				files: ['build/less/*.less'],
+				files: ['src/less/*.less'],
 				tasks: ['less:development', 'less:production']
 			},
 			skins: {
 				// Compile any skin less files upon saving
-				files: ['build/less/skins/*.less'],
+				files: ['src/less/skins/*.less'],
 				tasks: ['less:skins', 'less:minifiedSkins']
 			},
 			plugins: {
@@ -84,15 +84,15 @@ module.exports = function (grunt) { // jshint ignore:line
 			// Development not compressed
 			development: {
 				files: {
-					'dist/css/bootstrap4.css': 'build/less/Bootstrap4.less',
+					'dist/css/bootstrap4.css': 'src/less/Bootstrap4.less',
 					// compilation.css  :  source.less
-					'dist/css/AdminLTE.css': 'build/less/AdminLTE.less',
+					'dist/css/AdminLTE.css': 'src/less/AdminLTE.less',
 					// AdminLTE without plugins
-					'dist/css/alt/AdminLTE-without-plugins.css': 'build/less/AdminLTE-without-plugins.less',
+					'dist/css/alt/AdminLTE-without-plugins.css': 'src/less/AdminLTE-without-plugins.less',
 					// Separate plugins
-					'dist/css/alt/AdminLTE-select2.css': 'build/less/select2.less',
-					'dist/css/alt/AdminLTE-fullcalendar.css': 'build/less/fullcalendar.less',
-					'dist/css/alt/AdminLTE-bootstrap-social.css': 'build/less/bootstrap-social.less'
+					'dist/css/alt/AdminLTE-select2.css': 'src/less/select2.less',
+					'dist/css/alt/AdminLTE-fullcalendar.css': 'src/less/fullcalendar.less',
+					'dist/css/alt/AdminLTE-bootstrap-social.css': 'src/less/bootstrap-social.less'
 				}
 			},
 			// Production compressed version
@@ -101,33 +101,33 @@ module.exports = function (grunt) { // jshint ignore:line
 					compress: true
 				},
 				files: {
-					'dist/css/bootstrap4.min.css': 'build/less/Bootstrap4.less',
+					'dist/css/bootstrap4.min.css': 'src/less/Bootstrap4.less',
 					// compilation.css  :  source.less
-					'dist/css/AdminLTE.min.css': 'build/less/AdminLTE.less',
+					'dist/css/AdminLTE.min.css': 'src/less/AdminLTE.less',
 					// AdminLTE without plugins
-					'dist/css/alt/AdminLTE-without-plugins.min.css': 'build/less/AdminLTE-without-plugins.less',
+					'dist/css/alt/AdminLTE-without-plugins.min.css': 'src/less/AdminLTE-without-plugins.less',
 					// Separate plugins
-					'dist/css/alt/AdminLTE-select2.min.css': 'build/less/select2.less',
-					'dist/css/alt/AdminLTE-fullcalendar.min.css': 'build/less/fullcalendar.less',
-					'dist/css/alt/AdminLTE-bootstrap-social.min.css': 'build/less/bootstrap-social.less'
+					'dist/css/alt/AdminLTE-select2.min.css': 'src/less/select2.less',
+					'dist/css/alt/AdminLTE-fullcalendar.min.css': 'src/less/fullcalendar.less',
+					'dist/css/alt/AdminLTE-bootstrap-social.min.css': 'src/less/bootstrap-social.less'
 				}
 			},
 			// Non minified skin files
 			skins: {
 				files: {
-					'dist/css/skins/skin-blue.css': 'build/less/skins/skin-blue.less',
-					'dist/css/skins/skin-black.css': 'build/less/skins/skin-black.less',
-					'dist/css/skins/skin-yellow.css': 'build/less/skins/skin-yellow.less',
-					'dist/css/skins/skin-green.css': 'build/less/skins/skin-green.less',
-					'dist/css/skins/skin-red.css': 'build/less/skins/skin-red.less',
-					'dist/css/skins/skin-purple.css': 'build/less/skins/skin-purple.less',
-					'dist/css/skins/skin-blue-light.css': 'build/less/skins/skin-blue-light.less',
-					'dist/css/skins/skin-black-light.css': 'build/less/skins/skin-black-light.less',
-					'dist/css/skins/skin-yellow-light.css': 'build/less/skins/skin-yellow-light.less',
-					'dist/css/skins/skin-green-light.css': 'build/less/skins/skin-green-light.less',
-					'dist/css/skins/skin-red-light.css': 'build/less/skins/skin-red-light.less',
-					'dist/css/skins/skin-purple-light.css': 'build/less/skins/skin-purple-light.less',
-					'dist/css/skins/_all-skins.css': 'build/less/skins/_all-skins.less'
+					'dist/css/skins/skin-blue.css': 'src/less/skins/skin-blue.less',
+					'dist/css/skins/skin-black.css': 'src/less/skins/skin-black.less',
+					'dist/css/skins/skin-yellow.css': 'src/less/skins/skin-yellow.less',
+					'dist/css/skins/skin-green.css': 'src/less/skins/skin-green.less',
+					'dist/css/skins/skin-red.css': 'src/less/skins/skin-red.less',
+					'dist/css/skins/skin-purple.css': 'src/less/skins/skin-purple.less',
+					'dist/css/skins/skin-blue-light.css': 'src/less/skins/skin-blue-light.less',
+					'dist/css/skins/skin-black-light.css': 'src/less/skins/skin-black-light.less',
+					'dist/css/skins/skin-yellow-light.css': 'src/less/skins/skin-yellow-light.less',
+					'dist/css/skins/skin-green-light.css': 'src/less/skins/skin-green-light.less',
+					'dist/css/skins/skin-red-light.css': 'src/less/skins/skin-red-light.less',
+					'dist/css/skins/skin-purple-light.css': 'src/less/skins/skin-purple-light.less',
+					'dist/css/skins/_all-skins.css': 'src/less/skins/_all-skins.less'
 				}
 			},
 			// Skins minified
@@ -136,19 +136,19 @@ module.exports = function (grunt) { // jshint ignore:line
 					compress: true
 				},
 				files: {
-					'dist/css/skins/skin-blue.min.css': 'build/less/skins/skin-blue.less',
-					'dist/css/skins/skin-black.min.css': 'build/less/skins/skin-black.less',
-					'dist/css/skins/skin-yellow.min.css': 'build/less/skins/skin-yellow.less',
-					'dist/css/skins/skin-green.min.css': 'build/less/skins/skin-green.less',
-					'dist/css/skins/skin-red.min.css': 'build/less/skins/skin-red.less',
-					'dist/css/skins/skin-purple.min.css': 'build/less/skins/skin-purple.less',
-					'dist/css/skins/skin-blue-light.min.css': 'build/less/skins/skin-blue-light.less',
-					'dist/css/skins/skin-black-light.min.css': 'build/less/skins/skin-black-light.less',
-					'dist/css/skins/skin-yellow-light.min.css': 'build/less/skins/skin-yellow-light.less',
-					'dist/css/skins/skin-green-light.min.css': 'build/less/skins/skin-green-light.less',
-					'dist/css/skins/skin-red-light.min.css': 'build/less/skins/skin-red-light.less',
-					'dist/css/skins/skin-purple-light.min.css': 'build/less/skins/skin-purple-light.less',
-					'dist/css/skins/_all-skins.min.css': 'build/less/skins/_all-skins.less'
+					'dist/css/skins/skin-blue.min.css': 'src/less/skins/skin-blue.less',
+					'dist/css/skins/skin-black.min.css': 'src/less/skins/skin-black.less',
+					'dist/css/skins/skin-yellow.min.css': 'src/less/skins/skin-yellow.less',
+					'dist/css/skins/skin-green.min.css': 'src/less/skins/skin-green.less',
+					'dist/css/skins/skin-red.min.css': 'src/less/skins/skin-red.less',
+					'dist/css/skins/skin-purple.min.css': 'src/less/skins/skin-purple.less',
+					'dist/css/skins/skin-blue-light.min.css': 'src/less/skins/skin-blue-light.less',
+					'dist/css/skins/skin-black-light.min.css': 'src/less/skins/skin-black-light.less',
+					'dist/css/skins/skin-yellow-light.min.css': 'src/less/skins/skin-yellow-light.less',
+					'dist/css/skins/skin-green-light.min.css': 'src/less/skins/skin-green-light.less',
+					'dist/css/skins/skin-red-light.min.css': 'src/less/skins/skin-red-light.less',
+					'dist/css/skins/skin-purple-light.min.css': 'src/less/skins/skin-purple-light.less',
+					'dist/css/skins/_all-skins.min.css': 'src/less/skins/_all-skins.less'
 				}
 			},
 			// Plugins
@@ -232,14 +232,14 @@ module.exports = function (grunt) { // jshint ignore:line
 					sourceMapIncludeSources: true
 				},
 				src: [
-					'build/js/BoxRefresh.js',
-					'build/js/BoxWidget.js',
-					'build/js/ControlSidebar.js',
-					'build/js/DirectChat.js',
-					'build/js/PushMenu.js',
-					'build/js/TodoList.js',
-					'build/js/Tree.js',
-					'build/js/Layout.js'
+					'src/js/BoxRefresh.js',
+					'src/js/BoxWidget.js',
+					'src/js/ControlSidebar.js',
+					'src/js/DirectChat.js',
+					'src/js/PushMenu.js',
+					'src/js/TodoList.js',
+					'src/js/Tree.js',
+					'src/js/Layout.js'
 				],
 				dest: 'dist/js/adminlte.js'
 			},
@@ -255,14 +255,14 @@ module.exports = function (grunt) { // jshint ignore:line
 
 		// Build the documentation files
 		includes: {
-			build: {
+			src: {
 				src: ['*.html'], // Source files
 				dest: 'documentation/', // Destination directory
 				flatten: true,
-				cwd: 'documentation/build',
+				cwd: 'documentation/src',
 				options: {
 					silent: true,
-					includePath: 'documentation/build/include'
+					includePath: 'documentation/src/include'
 				}
 			}
 		},
@@ -284,16 +284,16 @@ module.exports = function (grunt) { // jshint ignore:line
 		// Validate JS code
 		jshint: {
 			options: {
-				jshintrc: 'build/js/.jshintrc'
+				jshintrc: 'src/js/.jshintrc'
 			},
 			grunt: {
 				options: {
-					jshintrc: 'build/grunt/.jshintrc'
+					jshintrc: 'src/grunt/.jshintrc'
 				},
 				src: 'Gruntfile.js'
 			},
 			core: {
-				src: 'build/js/*.js'
+				src: 'src/js/*.js'
 			},
 			demo: {
 				src: 'dist/js/demo.js'
@@ -308,7 +308,7 @@ module.exports = function (grunt) { // jshint ignore:line
 
 		jscs: {
 			options: {
-				config: 'build/js/.jscsrc'
+				config: 'src/js/.jscsrc'
 			},
 			core: {
 				src: '<%= jshint.core.src %>'
@@ -324,7 +324,7 @@ module.exports = function (grunt) { // jshint ignore:line
 		// Validate CSS files
 		csslint: {
 			options: {
-				csslintrc: 'build/less/.csslintrc'
+				csslintrc: 'src/less/.csslintrc'
 			},
 			dist: [
 				'dist/css/AdminLTE.css'
@@ -339,8 +339,8 @@ module.exports = function (grunt) { // jshint ignore:line
 			files: ['pages/**/*.html', '*.html']
 		},
 
-		// Delete images in build directory
-		// After compressing the images in the build/img dir, there is no need
+		// Delete images in src directory
+		// After compressing the images in the src/img dir, there is no need
 		// for them
 		clean: {
 			dist: ['dist']
