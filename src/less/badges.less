@@ -2,27 +2,34 @@
  * Component: Badge
  * ----------------
  */
-.badge-secondary {
-  background-color: @gray-lte;
-  color: #444;
-}
+.badge {
+  &-pill {
+	padding: 0.2em 0.6em 0.3em;
+	border-radius: 0.25em;
+  }
 
-.badge-danger {
-  &:extend(.bg-red);
-}
+  &-secondary {
+    background-color: @gray-lte;
+    color: #444;
+  }
 
-.badge-info {
-  &:extend(.bg-aqua);
-}
+  &-danger {
+    &:extend(.bg-red);
+  }
 
-.badge-warning {
-  &:extend(.bg-yellow);
-}
+  &-info {
+    &:extend(.bg-aqua);
+  }
 
-.badge-primary {
-  &:extend(.bg-light-blue);
-}
+  &-warning {
+    &:extend(.bg-yellow);
+  }
 
-.badge-success {
-  &:extend(.bg-green);
+  &-primary {
+    &:extend(.bg-light-blue);
+  }
+
+  &-success {
+    &:extend(.bg-green);
+  }
 }

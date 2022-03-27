@@ -60,7 +60,7 @@ module.exports = function (grunt) { // jshint ignore:line
 			},
 			js: {
 				// Compile js files upon saving
-				files: ['src/js/*.js'],
+				files: ['src/js/*.js', 'src/js/**/*.js'],
 				tasks: ['js']
 			},
 			less: {

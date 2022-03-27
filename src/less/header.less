@@ -43,7 +43,7 @@
   .navbar-custom-menu,
   .navbar-right {
     float: right;
-    @media (max-width: @grid-breakpoints[sm]-max) {
+    @media (max-width: @grid-breakpoints[md]) {
       a {
         color: inherit;
         background: transparent;
@@ -216,7 +216,7 @@
     }
   }
 
-  @media (max-width: @grid-breakpoints[sm]-max) {
+  @media (max-width: @grid-breakpoints[md]) {
     > .breadcrumb {
       position: relative;
       margin-top: 5px;
@@ -240,7 +240,7 @@
 }
 
 //Control navbar scaffolding on x-small screens
-@media (max-width: @grid-breakpoints[sm]-max) {
+@media (max-width: @grid-breakpoints[md]) {
   .navbar-custom-menu .navbar-nav > .nav-item {
     float: left;
   }
@@ -277,7 +277,7 @@
 }
 
 .navbar-collapse.float-left {
-  @media (max-width: @grid-breakpoints[sm]-max) {
+  @media (max-width: @grid-breakpoints[sm]) {
     float: none !important;
     + .navbar-custom-menu {
       display: block;

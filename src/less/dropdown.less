@@ -10,6 +10,7 @@
   > .dropdown-item > a {
     color: #777;
     display: block;
+    padding: 7px 10px;
   }
   > .dropdown-item > a > .glyphicon,
   > .dropdown-item > a > .fa,
@@ -65,7 +66,7 @@
     padding: 7px 10px;
     border-bottom: 1px solid #eeeeee;
     color: #444 !important;
-    @media (max-width: @grid-breakpoints[sm]-max) {
+    @media (max-width: @grid-breakpoints[sm]) {
       background: #fff !important;
       color: #444 !important;
     }
@@ -102,7 +103,8 @@
 .navbar-nav > .notifications-menu {
   > .dropdown-menu > .dropdown-item .menu {
     // Links inside the menu
-    > li > a {
+    > li > a,
+    > .nav-item > .nav-link {
       color: #444444;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -238,7 +240,7 @@
       #clearfix();
       a {
         color: #444 !important;
-        @media (max-width: @grid-breakpoints[sm]-max) {
+        @media (max-width: @grid-breakpoints[sm]) {
           background: #fff !important;
           color: #444 !important;
         }
@@ -253,7 +255,7 @@
       .btn-secondary {
         color: #666666;
         &:hover {
-          @media (max-width: @grid-breakpoints[sm]-max) {
+          @media (max-width: @grid-breakpoints[sm]) {
             background-color: #f9f9f9;
           }
         }
@@ -347,7 +349,7 @@
   }
 }
 
-@media (max-width: @grid-breakpoints[sm]-max) {
+@media (max-width: @grid-breakpoints[sm]) {
   .navbar-custom-menu > .navbar-nav {
     float: right;
     > li {

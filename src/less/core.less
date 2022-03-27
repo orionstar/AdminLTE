@@ -50,18 +50,18 @@ body {
   .layout-top-nav & {
     margin-left: 0;
   }
-  @media (max-width: @grid-breakpoints[xs]) {
+  @media (max-width: @grid-breakpoints[md]) {
     margin-left: 0;
   }
   // When opening the sidebar on large screens
   .sidebar-collapse & {
-    @media (min-width: @grid-breakpoints[sm]) {
+    @media (min-width: @grid-breakpoints[md]) {
       margin-left: 0;
     }
   }
   // When opening the sidebar on small screens
   .sidebar-open & {
-    @media (max-width: @grid-breakpoints[xs]) {
+    @media (max-width: @grid-breakpoints[md]) {
       transform: translate(@sidebar-width, 0);
     }
   }
