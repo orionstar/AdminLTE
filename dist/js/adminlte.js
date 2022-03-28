@@ -8,7 +8,7 @@
 * @support <https://github.com/ColorlibHQ/AdminLTE/issues>
 * @version v2.5
 * @repository https://github.com/orionstar/AdminLTE.git
-* @license MIT <http://opensource.org/licenses/MIT>
+* @license MIT <https://opensource.org/licenses/MIT>
 */
 
 // Make sure jQuery has been loaded

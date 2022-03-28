@@ -47,7 +47,7 @@
   > .box-header {
     color: @text-color;
     background: @color;
-    background-color: @color;
+
     a,
     .btn {
       color: @text-color;
@@ -74,11 +74,8 @@
 }
 
 //Different radius each side
-.border-radius(@top-left,  @top-right,  @bottom-left,  @bottom-right)  {
-  border-top-left-radius: @top-left;
-  border-top-right-radius: @top-right;
-  border-bottom-right-radius: @bottom-right;
-  border-bottom-left-radius: @bottom-left;
+.border-radius(@topLeft,  @topRight,  @bottomLeft,  @bottomRight)  {
+  border-radius: @topLeft @topRight @bottomRight @bottomLeft;
 }
 
 //Gradient background

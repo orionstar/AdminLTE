@@ -9,7 +9,7 @@
   <!-- Bootstrap 4 -->
   <link rel="stylesheet" href="../../dist/css/bootstrap4.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../dist/css/font-awesome-4.7.0.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
@@ -39,220 +39,260 @@
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Admin</b>LTE</span>
     </a>
+
     <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-expand navbar-static-top main-header" role="navigation">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
 
-      <div class="navbar-custom-menu">
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu ml-auto">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <li class="nav-item dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="nav-link" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <span class="badge badge-success">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header nav-item">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
+              <li class="dropdown-item header">You have 4 messages</li>
+              <li class="dropdown-item">
+                <!-- inner menu: contains the messages -->
+                <ul class="nav flex-column flex-nowrap menu">
                   <li class="nav-item"><!-- start message -->
                     <a href="#" class="nav-link">
                       <div class="float-left">
+                        <!-- User Image -->
                         <img src="../../dist/img/user2-160x160.jpg" class="rounded-circle" alt="User Image">
                       </div>
+                      <!-- Message title and timestamp -->
                       <h4>
                         Support Team
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
+                      <!-- The message -->
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
                   <!-- end message -->
-                  <li class="nav-item">
+                  <li class="nav-item"><!-- start message -->
                     <a href="#" class="nav-link">
                       <div class="float-left">
+                        <!-- User Image -->
                         <img src="../../dist/img/user3-128x128.jpg" class="rounded-circle" alt="User Image">
                       </div>
+                      <!-- Message title and timestamp -->
                       <h4>
                         AdminLTE Design Team
                         <small><i class="fa fa-clock-o"></i> 2 hours</small>
                       </h4>
+                      <!-- The message -->
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- end message -->
+                  <li class="nav-item"><!-- start message -->
                     <a href="#" class="nav-link">
                       <div class="float-left">
+                        <!-- User Image -->
                         <img src="../../dist/img/user4-128x128.jpg" class="rounded-circle" alt="User Image">
                       </div>
+                      <!-- Message title and timestamp -->
                       <h4>
                         Developers
                         <small><i class="fa fa-clock-o"></i> Today</small>
                       </h4>
+                      <!-- The message -->
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- end message -->
+                  <li class="nav-item"><!-- start message -->
                     <a href="#" class="nav-link">
                       <div class="float-left">
+                        <!-- User Image -->
                         <img src="../../dist/img/user3-128x128.jpg" class="rounded-circle" alt="User Image">
                       </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <div class="float-left">
-                        <img src="../../dist/img/user4-128x128.jpg" class="rounded-circle" alt="User Image">
-                      </div>
+                      <!-- Message title and timestamp -->
                       <h4>
                         Reviewers
                         <small><i class="fa fa-clock-o"></i> 2 days</small>
                       </h4>
+                      <!-- The message -->
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
+                  <!-- end message -->
+                  <li class="nav-item"><!-- start message -->
+                    <a href="#" class="nav-link">
+                      <div class="float-left">
+                        <!-- User Image -->
+                        <img src="../../dist/img/user2-160x160.jpg" class="rounded-circle" alt="User Image">
+                      </div>
+                      <!-- Message title and timestamp -->
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <!-- The message -->
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
                 </ul>
+                <!-- /.menu -->
               </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
+              <li class="dropdown-item footer"><a href="#">See All Messages</a></li>
             </ul>
           </li>
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <!-- /.messages-menu -->
+
+          <!-- Notifications Menu -->
+          <li class="nav-item dropdown notifications-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="nav-link" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
               <span class="badge badge-warning">10</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header nav-item">You have 10 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="#">
+              <li class="dropdown-item header">You have 10 notifications</li>
+              <li class="dropdown-item">
+                <!-- Inner Menu: contains the notifications -->
+                <ul class="nav flex-column flex-nowrap menu">
+                  <li class="nav-item"><!-- start notification -->
+                    <a href="#" class="nav-link">
                       <i class="fa fa-users text-aqua"></i> 5 new members joined today
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
+                  <!-- end notification -->
+                  <li class="nav-item"><!-- start notification -->
+                    <a href="#" class="nav-link">
                       <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
+          page and may cause design problems
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
+                  <!-- end notification -->
+                  <li class="nav-item"><!-- start notification -->
+                    <a href="#" class="nav-link">
                       <i class="fa fa-users text-red"></i> 5 new members joined
                     </a>
                   </li>
-
-                  <li>
-                    <a href="#">
+                  <!-- end notification -->
+                  <li class="nav-item"><!-- start notification -->
+                    <a href="#" class="nav-link">
                       <i class="fa fa-shopping-cart text-green"></i> 25 sales made
                     </a>
                   </li>
-                  <li>
-                    <a href="#">
+                  <!-- end notification -->
+                  <li class="nav-item"><!-- start notification -->
+                    <a href="#" class="nav-link">
                       <i class="fa fa-user text-red"></i> You changed your username
                     </a>
                   </li>
+                  <!-- end notification -->
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="dropdown-item footer"><a href="#">View all</a></li>
             </ul>
           </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <li class="dropdown tasks-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <!-- Tasks Menu -->
+          <li class="nav-item dropdown tasks-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="nav-link" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
               <span class="badge badge-danger">9</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header nav-item">You have 9 tasks</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li class="nav-item"><!-- Task item -->
+              <li class="dropdown-item header">You have 9 tasks</li>
+              <li class="dropdown-item">
+                <!-- Inner menu: contains the tasks -->
+               <ul class="nav flex-column flex-nowrap menu">
+                 <li class="nav-item"><!-- Task item -->
                     <a href="#" class="nav-link">
+                      <!-- Task title and progress text -->
                       <h3>
                         Design some buttons
                         <small class="float-right">20%</small>
                       </h3>
+                      <!-- The progress bar -->
                       <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                        <!-- Change the css width attribute to simulate progress -->
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">20% Complete</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
                   <li class="nav-item"><!-- Task item -->
                     <a href="#" class="nav-link">
+                      <!-- Task title and progress text -->
                       <h3>
                         Create a nice theme
                         <small class="float-right">40%</small>
                       </h3>
+                      <!-- The progress bar -->
                       <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
                         <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">40% Complete</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
                   <li class="nav-item"><!-- Task item -->
                     <a href="#" class="nav-link">
+                      <!-- Task title and progress text -->
                       <h3>
                         Some task I need to do
                         <small class="float-right">60%</small>
                       </h3>
+                      <!-- The progress bar -->
                       <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
                         <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
                   <li class="nav-item"><!-- Task item -->
                     <a href="#" class="nav-link">
+                      <!-- Task title and progress text -->
                       <h3>
                         Make beautiful transitions
                         <small class="float-right">80%</small>
                       </h3>
+                      <!-- The progress bar -->
                       <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
                         <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">80% Complete</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <!-- end task item -->
                 </ul>
               </li>
-              <li class="footer">
+              <li class="dropdown-item footer">
                 <a href="#">View all tasks</a>
               </li>
             </ul>
           </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <!-- User Account Menu -->
+          <li class="nav-item dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
               <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <!-- d-none d-sm-inline hides the username on small devices so only the image appears. -->
+              <span class="d-none d-sm-inline">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
-              <!-- User image -->
+              <!-- The user image in the menu -->
               <li class="user-header">
                 <img src="../../dist/img/user2-160x160.jpg" class="rounded-circle" alt="User Image">
 
@@ -288,13 +328,14 @@
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -313,7 +354,7 @@
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
+          <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
               </span>
@@ -323,7 +364,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header nav-item">MAIN NAVIGATION</li>
-        <li class="treeview">
+        <li class="nav-item treeview">
           <a href="#" class="nav-link">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="float-right-container">
@@ -331,8 +372,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li class="nav-item"><a href="index2.html" class="nav-link"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
         <li class="nav-item treeview">
@@ -340,26 +381,26 @@
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
             <span class="float-right-container">
-              <span class="badge badge-primary float-right">4</span>
+              <span class="badge badge-pill badge-primary float-right">4</span>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
         </li>
-        <li>
-          <a href="../widgets.html">
+        <li class="nav-item">
+          <a href="../../pages/widgets.html" class="nav-link">
             <i class="fa fa-th"></i> <span>Widgets</span>
             <span class="float-right-container">
-              <span class="badge badge-pill float-right bg-green">new</small>
+              <small class="badge badge-pill float-right bg-green">new</small>
             </span>
           </a>
         </li>
-        <li class="treeview active">
-          <a href="#">
+        <li class="nav-item active treeview">
+          <a href="#" class="nav-link">
             <i class="fa fa-pie-chart"></i>
             <span>Charts</span>
             <span class="float-right-container">
@@ -367,10 +408,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li class="active"><a href="inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+            <li class="nav-item active"><a class="nav-link" href="../../pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
           </ul>
         </li>
         <li class="nav-item treeview">
@@ -382,12 +423,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
         <li class="nav-item treeview">
@@ -398,9 +439,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
         </li>
         <li class="nav-item treeview">
@@ -411,26 +452,26 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
           </ul>
         </li>
-        <li>
-          <a href="../calendar.html">
+        <li class="nav-item">
+          <a href="../../pages/calendar.html" class="nav-link">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="float-right-container">
-              <span class="badge badge-pill float-right bg-red">3</small>
-              <span class="badge badge-pill float-right bg-blue">17</small>
+              <small class="badge badge-pill float-right bg-red">3</small>
+              <small class="badge badge-pill float-right bg-blue">17</small>
             </span>
           </a>
         </li>
-        <li>
-          <a href="../mailbox/mailbox.html">
+        <li class="nav-item">
+          <a href="../../pages/mailbox/mailbox.html" class="nav-link">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="float-right-container">
-              <span class="badge badge-pill float-right bg-yellow">12</small>
-              <span class="badge badge-pill float-right bg-green">16</small>
-              <span class="badge badge-pill float-right bg-red">5</small>
+              <small class="badge badge-pill float-right bg-yellow">12</small>
+              <small class="badge badge-pill float-right bg-green">16</small>
+              <small class="badge badge-pill float-right bg-red">5</small>
             </span>
           </a>
         </li>
@@ -442,15 +483,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="nav-item"><a class="nav-link" href="../examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li class="nav-item"><a class="nav-link" href="../examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
         <li class="nav-item treeview">
@@ -506,7 +547,7 @@
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Charts</a></li>
+        <li class="breadcrumb-item"><a href="#">Charts</a></li>
         <li class="breadcrumb-item active">Inline Charts</li>
       </ol>
     </section>
@@ -516,7 +557,7 @@
 
       <!-- row -->
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <!-- jQuery Knob -->
           <div class="box box-solid">
             <div class="box-header">
@@ -586,7 +627,7 @@
       <!-- /.row -->
 
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="box box-solid">
             <div class="box-header">
               <i class="fa fa-bar-chart-o"></i>
@@ -639,7 +680,7 @@
       <!-- /.row -->
 
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="box box-solid">
             <div class="box-header">
               <i class="fa fa-bar-chart-o"></i>
@@ -766,7 +807,7 @@
       <!-- /.row -->
 
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <div class="box box-solid">
             <div class="box-header">
               <h3 class="box-title">Sparkline examples</h3>
@@ -883,11 +924,11 @@
   </footer>
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control-sidebar-dark" style="display: none;">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-home-tab" class="nav-link" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" class="nav-link" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
@@ -948,7 +989,7 @@
             <a href="javascript:void(0)">
               <h4 class="control-sidebar-subheading">
                 Custom Template Design
-                <span class="badge badge-danger float-right">70%</span>
+                <span class="badge badge-pill badge-danger float-right">70%</span>
               </h4>
 
               <div class="progress progress-xxs">
@@ -960,7 +1001,7 @@
             <a href="javascript:void(0)">
               <h4 class="control-sidebar-subheading">
                 Update Resume
-                <span class="badge badge-success float-right">95%</span>
+                <span class="badge badge-pill badge-success float-right">95%</span>
               </h4>
 
               <div class="progress progress-xxs">
@@ -972,7 +1013,7 @@
             <a href="javascript:void(0)">
               <h4 class="control-sidebar-subheading">
                 Laravel Integration
-                <span class="badge badge-warning float-right">50%</span>
+                <span class="badge badge-pill badge-warning float-right">50%</span>
               </h4>
 
               <div class="progress progress-xxs">
@@ -984,7 +1025,7 @@
             <a href="javascript:void(0)">
               <h4 class="control-sidebar-subheading">
                 Back End Framework
-                <span class="badge badge-primary float-right">68%</span>
+                <span class="badge badge-pill badge-primary float-right">68%</span>
               </h4>
 
               <div class="progress progress-xxs">

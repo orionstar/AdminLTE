@@ -401,7 +401,7 @@
     "split-string" "^3.0.2"
     "to-regex" "^3.0.1"
 
-"braces@^3.0.1":
+"braces@^3.0.2":
   "integrity" "sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A=="
   "resolved" "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz"
   "version" "3.0.2"
@@ -2456,6 +2456,11 @@
   dependencies:
     "less" "~1.3"
 
+"grunt-text-replace@^0.4.0":
+  "integrity" "sha1-252c5Z4v5J2id+nbwZXD4Rz7FsI="
+  "resolved" "https://registry.npmjs.org/grunt-text-replace/-/grunt-text-replace-0.4.0.tgz"
+  "version" "0.4.0"
+
 "grunt@^1.3.0", "grunt@^1.4.1", "grunt@>=0.4.5", "grunt@>=1.0.0", "grunt@>=1.0.4", "grunt@>=1.4.1":
   "integrity" "sha512-ZXIYXTsAVrA7sM+jZxjQdrBOAg7DyMUplOMhTaspMRExei+fD0BTwdWXnn0W5SXqhb/Q/nlkzXclSi3IH55PIA=="
   "resolved" "https://registry.npmjs.org/grunt/-/grunt-1.4.1.tgz"
@@ -3214,10 +3219,22 @@
   dependencies:
     "jquery" ">=1.8.0 <4.0.0"
 
-"jquery@^3.6.0", "jquery@>=1.10", "jquery@>=1.5", "jquery@>=1.7", "jquery@>=1.7.1 <4.0.0", "jquery@>=1.8", "jquery@>=1.8.0 <4.0.0", "jquery@1.9.1 - 3", "jquery@2 - 3":
+"jquery@^3.6.0", "jquery@>=1.10", "jquery@>=1.7", "jquery@>=1.7.1 <4.0.0", "jquery@>=1.8", "jquery@>=1.8.0 <4.0.0", "jquery@1.9.1 - 3", "jquery@2 - 3":
   "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
   "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
   "version" "3.6.0"
+
+"jquery@~1.11.3":
+  "integrity" "sha1-3Yt0J4snEC0p32Pq4oMIqM+htYM="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-1.11.3.tgz"
+  "version" "1.11.3"
+
+"jqvmap@^1.5.1":
+  "integrity" "sha1-FnCnMdAjhjc9pM+uvU2w62NNTPs="
+  "resolved" "https://registry.npmjs.org/jqvmap/-/jqvmap-1.5.1.tgz"
+  "version" "1.5.1"
+  dependencies:
+    "jquery" "~1.11.3"
 
 "js-yaml@^3.13.1", "js-yaml@~3.14.0":
   "integrity" "sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g=="
@@ -3331,13 +3348,6 @@
   "integrity" "sha1-0Hf2glVx+CEy+d/67Vh7QCn+/1c="
   "resolved" "https://registry.npmjs.org/JSV/-/JSV-4.0.2.tgz"
   "version" "4.0.2"
-
-"jvectormap@^1.2.2":
-  "integrity" "sha1-LkQIskpgRz/xBsHnJD43WuXKhdo="
-  "resolved" "https://registry.npmjs.org/jvectormap/-/jvectormap-1.2.2.tgz"
-  "version" "1.2.2"
-  dependencies:
-    "jquery" ">=1.5"
 
 "keyv@3.0.0":
   "integrity" "sha512-eguHnq22OE3uVoSYG0LVWNP+4ppamWr9+zWBe1bsNcovIMy6huUJFPgy4mGwCd/rnl3vOLGW1MTlu4c57CT1xA=="
@@ -3713,12 +3723,12 @@
     "to-regex" "^3.0.2"
 
 "micromatch@^4.0.2":
-  "integrity" "sha512-pRmzw/XUcwXGpD9aI9q/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V10kGhABbNcHVk5wHgWwg=="
-  "resolved" "https://registry.npmjs.org/micromatch/-/micromatch-4.0.4.tgz"
-  "version" "4.0.4"
+  "integrity" "sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA=="
+  "resolved" "https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz"
+  "version" "4.0.5"
   dependencies:
-    "braces" "^3.0.1"
-    "picomatch" "^2.2.3"
+    "braces" "^3.0.2"
+    "picomatch" "^2.3.1"
 
 "miller-rabin@^4.0.0":
   "integrity" "sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O/Oxi8AiNouAHvDSzHS0viUJc+V5vm3eq91Xwqn9dp4jRA=="
@@ -3827,11 +3837,6 @@
   "integrity" "sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ=="
   "resolved" "https://registry.npmjs.org/moment/-/moment-2.29.1.tgz"
   "version" "2.29.1"
-
-"morris.js@^0.5.0":
-  "integrity" "sha1-cldnE1z64Fmq51mZuyzmocXRtEs="
-  "resolved" "https://registry.npmjs.org/morris.js/-/morris.js-0.5.0.tgz"
-  "version" "0.5.0"
 
 "morris.js06@^0.6.9":
   "integrity" "sha512-QlFRwZPaUrLZxGN/nj2uTUFst0JlTPhPRL2ePBf78brzHjz+gWGHlchmXkjDfvHr34YhfI4RHsT8+g6GsX8C9Q=="
@@ -4351,7 +4356,7 @@
   "resolved" "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
   "version" "1.2.0"
 
-"picomatch@^2.2.3":
+"picomatch@^2.3.1":
   "integrity" "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="
   "resolved" "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   "version" "2.3.1"

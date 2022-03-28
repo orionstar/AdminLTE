@@ -86,7 +86,8 @@
     }
 
     // Box color variations
-    &.box-default {
+    &.box-default,
+    &.box-secondary {
       .box-solid-variant(@gray-lte, #444);
     }
     &.box-primary {
@@ -209,6 +210,7 @@
     float: right;
     margin-top: -5px;
     margin-bottom: -5px;
+
     [data-toggle="tooltip"] {
       position: relative;
     }

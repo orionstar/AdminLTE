@@ -57,7 +57,7 @@
 .skin-black .main-header .logo:hover {
   background-color: #fcfcfc;
 }
-@media (max-width: 0) {
+@media (max-width: 768px) {
   .skin-black .main-header .logo {
     background-color: #222;
     color: #fff;
@@ -134,10 +134,7 @@
 }
 .skin-black .sidebar-form input[type="text"] {
   color: #666;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-radius: 2px 0 0 2px;
 }
 .skin-black .sidebar-form input[type="text"]:focus,
 .skin-black .sidebar-form input[type="text"]:focus + .input-group-append .btn {
@@ -149,10 +146,7 @@
 }
 .skin-black .sidebar-form .btn {
   color: #999;
-  border-top-left-radius: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 0;
+  border-radius: 0 2px 2px 0;
   border: 1px solid transparent;
 }
 .skin-black .pace .pace-progress {

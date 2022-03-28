@@ -47,10 +47,18 @@ module.exports = function (grunt) { // jshint ignore:line
 					src: ['img/**/*.{png,jpg,gif,svg,jpeg}'],
 					dest: 'dist'
 				}]
+			},
+			fa470: {
+				files: [{
+					expand: true,
+					cwd: 'node_modules/font-awesome/fonts/',
+					src: ['**'],
+					dest: 'dist/fonts/font-awesome-4.7.0/'
+				}]
 			}
 		},
 		watch: {
-			imageCopier: {
+			copyImages: {
 				files: ['src/img/**/*.{png,jpg,gif,svg,jpeg}'],
 				tasks: ['copy:images']
 			},
@@ -166,6 +174,16 @@ module.exports = function (grunt) { // jshint ignore:line
 					// jqvmap
 					'dist/plugins/jqvmap/jqvmap.min.css': 'dist/plugins/jqvmap/jqvmap.css'
 				}
+			},
+			// Font-Awesome 4.7.0
+			fa470: {
+				options: {
+					compress: true
+				},
+				files: {
+					// Font Awesome 4.7.0
+					'dist/css/font-awesome-4.7.0.min.css': 'node_modules/font-awesome/css/font-awesome.css'
+				}
 			}
 		},
 
@@ -222,7 +240,7 @@ module.exports = function (grunt) { // jshint ignore:line
                         + '* @support <https://github.com/ColorlibHQ/AdminLTE/issues>\n'
                         + '* @version <%= pkg.version %>\n'
                         + '* @repository <%= pkg.repository.url %>\n'
-                        + '* @license MIT <http://opensource.org/licenses/MIT>\n'
+                        + '* @license MIT <https://opensource.org/licenses/MIT>\n'
                         + '*/\n\n'
                         + '// Make sure jQuery has been loaded\n'
                         + 'if (typeof jQuery === \'undefined\') {\n'
@@ -245,6 +263,7 @@ module.exports = function (grunt) { // jshint ignore:line
 			},
 			vendor: {
 				src: [
+					'node_modules/jquery/dist/jquery.js',
 					'node_modules/jquery/dist/jquery.js',
 					'node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 				],
@@ -339,9 +358,21 @@ module.exports = function (grunt) { // jshint ignore:line
 			files: ['pages/**/*.html', '*.html']
 		},
 
-		// Delete images in src directory
-		// After compressing the images in the src/img dir, there is no need
-		// for them
+		// Replace image paths in AdminLTE without plugins
+		replace: {
+			fa470: {
+				src: ['dist/css/font-awesome-4.7.0.min.css'],
+				dest: 'dist/css/font-awesome-4.7.0.min.css',
+				replacements: [
+					{
+						from: '../fonts/',
+						to: '../fonts/font-awesome-4.7.0/'
+					}
+				]
+			}
+		},
+
+		// Delete dist directory
 		clean: {
 			dist: ['dist']
 		}
@@ -372,6 +403,8 @@ module.exports = function (grunt) { // jshint ignore:line
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	// Copy
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	// Replace
+	grunt.loadNpmTasks('grunt-text-replace');
 
 	// imageCopyBuild Task
 	grunt.registerTask('imageCopyBuild', ['copy:images', 'image']);
@@ -379,6 +412,8 @@ module.exports = function (grunt) { // jshint ignore:line
 	grunt.registerTask('pluginsCopyBuild', ['copy:plugins', 'pluginsBuild']);
 	// pluginsBuild Task
 	grunt.registerTask('pluginsBuild', ['less:plugins', 'concat:plugins', 'uglify:plugins']);
+	// Font-Awesome 4.7.0
+	grunt.registerTask('fa470', ['copy:fa470', 'less:fa470', 'replace:fa470']);
 	// JS task
 	grunt.registerTask('js', ['concat:dist', 'concat:vendor', 'uglify:production']);
 	// Linting task

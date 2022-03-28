@@ -156,7 +156,9 @@ $(function () {
     ykeys     : ['item1', 'item2'],
     labels    : ['Item 1', 'Item 2'],
     lineColors: ['#a0d0e0', '#3c8dbc'],
-    hideHover : 'auto'
+    hideHover : 'auto',
+    dataLabels: false,
+    animate: false
   });
   var line = new Morris.Line({
     element          : 'line-chart',
@@ -178,7 +180,9 @@ $(function () {
     labels           : ['Item 1'],
     lineColors       : ['#efefef'],
     lineWidth        : 2,
-    hideHover        : 'auto',
+    hideHover        : false,
+    dataLabels: false,
+    animate: false,
     gridTextColor    : '#fff',
     gridStrokeWidth  : 0.4,
     pointSize        : 4,

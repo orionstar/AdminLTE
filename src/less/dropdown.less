@@ -7,20 +7,28 @@
 .dropdown-menu {
   box-shadow: none;
   border-color: #eee;
-  > .dropdown-item > a {
-    color: #777;
-    display: block;
-    padding: 7px 10px;
+
+  > .dropdown-item {
+    &,
+    a {
+      color: #777;
+      display: block;
+      padding: 7px 10px;
+
+      > .glyphicon,
+      > .fa,
+      > .ion {
+        margin-right: 10px;
+      }
+    }
   }
-  > .dropdown-item > a > .glyphicon,
-  > .dropdown-item > a > .fa,
-  > .dropdown-item > a > .ion {
-    margin-right: 10px;
-  }
-  > .dropdown-item > a :hover {
+
+  > a:hover,
+  > .dropdown-item:hover {
     background-color: lighten(@gray-lte, 5%);
     color: #333;
   }
+
   > .dropdown-divider {
     background-color: #eee;
   }
@@ -66,10 +74,12 @@
     padding: 7px 10px;
     border-bottom: 1px solid #eeeeee;
     color: #444 !important;
+
     @media (max-width: @grid-breakpoints[sm]) {
       background: #fff !important;
       color: #444 !important;
     }
+
     text-align: center;
     //Hover state
     &:hover {
@@ -85,10 +95,12 @@
     padding: 0;
     list-style: none;
     overflow-x: hidden;
+
     > .nav-item > .nav-link {
       display: block;
       white-space: nowrap; /* Prevent text from breaking */
       border-bottom: 1px solid #f4f4f4;
+
       // Hove state
       &:hover {
         color: #16181b;
